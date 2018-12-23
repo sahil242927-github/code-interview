@@ -18,7 +18,7 @@ function reverse(str) {
 }
 reverse("main");
 
-/*====== Solution 2 ======  */
+/*====== Solution 3 ======  */
 
 /* reduce() function: 
         1. it takes all the different values of the array and
