@@ -7,7 +7,7 @@ maxChar("apple 123111")    ====  "1"
 */
 
 // Converting the string into object
-let str = "Hello World";
+let str = "This is my fault".replace(" ", "").toLowerCase();
 let strObj = {};
 
 for (let char of str) {
@@ -18,13 +18,15 @@ for (let char of str) {
   strObj[char] = strObj[char] + 1 || 1;
 }
 
+console.log(strObj);
+
 let maxChar = "";
 let max = "";
 
-for (let char in strObj) {
-  if (strObj[char] > max) {
-    max = strObj[char];
-    maxChar = char;
+for (let key in strObj) {
+  if (strObj[key] > max) {
+    max = strObj[key];
+    maxChar = key;
   }
 }
 

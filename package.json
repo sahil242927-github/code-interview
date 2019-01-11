@@ -1,0 +1,20 @@
+{
+  "name": "codeInter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "array-chunking.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/sahil242927/code-inter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/sahil242927/code-inter/issues"
+  },
+  "homepage": "https://gitlab.com/sahil242927/code-inter#readme"
+}

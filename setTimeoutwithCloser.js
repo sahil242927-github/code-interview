@@ -1,22 +1,12 @@
 let fruits = ["banana", "apple", "Orange"];
 
-/* function closerWithsettimeout() {
-  return fruits.array.forEach((elem, i) => {
-    return (closer = () => {
-      setTimeout(() => {
-        console.log(elem);
-      }, i * 1000);
-    });
-  });
-}
- */
 function closerWithsettimeout() {
-  return fruits.array.forEach((elem, i) => {
-    return function closer() {
+  return function() {
+    fruits.forEach(function(elem, i) {
       setTimeout(() => {
         console.log(elem);
-      }, i * 1000);
-    };
-  });
+      }, 1000 * i);
+    });
+  };
 }
-closerWithsettimeout();
+closerWithsettimeout()();
