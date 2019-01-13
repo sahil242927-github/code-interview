@@ -1,18 +1,15 @@
-/* The simple solution to this is to use IIFE
--------------------------------------------
- */
+function printSteps(n) {
+  /* Check the base case */
+  if (n === 0) {
+    return;
+  }
 
-(function() {
-  var sahil = {
-    checkThis: function() {
-      console.log(this);
+  let row = 0;
+  let col = 0;
+  let cell = 0;
+  for (row = 0; row < n; row++) {}
+  /* Calling function again. Making sure the arguments have changed*/
+  printSteps(n - 1);
+}
 
-      function checkOther() {
-        console.log(this);
-      }
-      checkOther(); // checkThis() function called in "global context", will return "this" as "window"
-    }
-  };
-  var moo = sahil.checkThis;
-  moo(); // moo() function called in "global context", will return "this" as "window"
-})();
+printSteps(10);
