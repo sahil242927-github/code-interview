@@ -98,7 +98,7 @@ function printStepsWithRecursion(n, row = 0, stair = "") {
   if (stair.length <= row) {
     stair += "#";
   } else {
-    stair += " ";
+    stair += "-";
   }
 
   printStepsWithRecursion(n, row, stair);
