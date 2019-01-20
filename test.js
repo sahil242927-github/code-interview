@@ -1,15 +1,7 @@
-function printSteps(n) {
-  /* Check the base case */
-  if (n === 0) {
-    return;
-  }
+"use strict";
 
-  let row = 0;
-  let col = 0;
-  let cell = 0;
-  for (row = 0; row < n; row++) {}
-  /* Calling function again. Making sure the arguments have changed*/
-  printSteps(n - 1);
-}
+let a = "test";
 
-printSteps(10);
+delete a;
+
+console.log(a);

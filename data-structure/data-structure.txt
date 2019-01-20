@@ -1,0 +1,8 @@
+1. Data structure are all about runtime-complexity.
+
+2. Data structure: is a way of organizing information with optimal 
+   `runtime-complexity` for adding or removing records.
+
+3. JavaScript natively implements several data structures. 
+
+
