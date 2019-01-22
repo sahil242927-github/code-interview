@@ -4,7 +4,8 @@ Implement a "peek" method in this Queue class.
 Peek should return the last element (The next one to be returned) from
 the Queue without removing it
 
-The peek() method of Queue Interface returns the element at the front the container. It does not deletes the element in the container. This method returns the head of the queue. The method does not throws an exception when the Queue is empty, it returns null instead.
+The peek() method here returns head of the queue
+Queue { data: [ 20, 16, 9 ] }  // peek() will return 9
 
 */
 class Queue {
@@ -19,15 +20,17 @@ class Queue {
   }
 
   peek() {
-    return this.data.length;
+    return this.data[this.data.length - 1];
   }
 }
 
 const q = new Queue();
-q.add(1);
-q.add(2);
-q.add(3);
+q.add(9);
+q.add(16);
+q.add(20);
 
 console.log(q.peek());
+
+console.log(q);
 
 module.exports = Queue;

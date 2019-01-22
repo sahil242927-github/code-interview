@@ -15,20 +15,20 @@ function wave(sourceOne, sourceTwo) {
 
   return q;
 }
-/* const q1 = new Queue();
+const q1 = new Queue();
 q1.add(1);
 q1.add(2);
 q1.add(3);
 q1.add(4);
 
-console.log(q1);
+//console.log(q1);
 
 const q2 = new Queue();
 q2.add("Yo");
 q2.add("HI");
 q2.add("No");
 
-console.log(q2); */
+//console.log(q2);
 
 const waveQ = wave(q1, q2);
 

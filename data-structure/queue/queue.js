@@ -4,8 +4,6 @@
 crate a queue data-structure. The Queue should be class with methods
 'add' and 'remove'.
 
-Adding to the queue should store an element until it is removed.
-
 --Example:
 const q = new Queue();
 q.add(1);
@@ -25,4 +23,17 @@ class Queue {
   remove() {
     return this.data.pop();
   }
+
+  peek() {
+    return this.data[this.data.length - 1];
+  }
 }
+
+const q = new Queue();
+q.add(5);
+q.add(6);
+q.add(10);
+
+console.log(q);
+console.log(q.remove());
+console.log(q.peek());
