@@ -7,7 +7,7 @@ maxChar("apple 123111")    ====  "1"
 */
 
 // Converting the string into object
-let str = "This is my fault".replace(" ", "").toLowerCase();
+let str = "This is my fault".replace(/ /g, "").toLowerCase();
 let strObj = {};
 
 for (let char of str) {
