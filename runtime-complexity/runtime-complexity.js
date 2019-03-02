@@ -32,7 +32,7 @@ Steps Algorithm
 ######
 
 Details: As we start to increase the value of `n` into our algorithm,
-we have to significantly more things each time n was is increased by 1
+we have to significantly do more things each time n is increased by 1
 
 n = 2, we have to do 4 things
 n = 3, we have to do 9 things
