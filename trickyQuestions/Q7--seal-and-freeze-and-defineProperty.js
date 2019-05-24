@@ -22,4 +22,6 @@
             but allows you to modify */
 let fruits = { name: "mango", price: 24 };
 Object.seal(fruits);
+
+// you can't add or modify
 Object.freeze(fruits);

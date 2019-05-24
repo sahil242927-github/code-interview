@@ -2,12 +2,16 @@
 --Discription
 
 crate a queue data-structure. The Queue should be class with methods
-'add' and 'remove'.
+'add' , 'remove', and 'peek'.
+
+peek() => The method returns the head of the Queue.
 
 --Example:
 const q = new Queue();
 q.add(1);
+q.add(2);
 q.remove(); returns 1
+q.peek(); returns 1 "the head of the queue"
 
 */
 
@@ -18,10 +22,13 @@ class Queue {
 
   add(record) {
     this.data.unshift(record);
+
   }
 
   remove() {
-    return this.data.pop();
+    const removedItem = this.data.pop();
+    return (removedItem) ? removedItem : "There is no item to remove";
+
   }
 
   peek() {
@@ -35,5 +42,6 @@ q.add(6);
 q.add(10);
 
 console.log(q);
+console.log(q.remove());
 console.log(q.remove());
 console.log(q.peek());

@@ -1,4 +1,4 @@
-/* 
+
 Queue: it can be thought of as like a container of sorts where
 records or pieces of data enter on one end of this container and then
 exit on the other.
@@ -8,4 +8,3 @@ Note: we should only expose queue methods (unshift and pop) outside of the class
 One possible reason to use a Queue instead array by hiding all the other 
 functions of an array is the performance.
 
-*/

@@ -38,3 +38,14 @@ function reverse2(str) {
   }, "");
 }
 console.log(reverse2("main"));
+
+const str = "i am done";
+
+
+function reverseStr(str) {
+  return str.split("").reduce((rev, character) => character + rev, "")
+}
+
+console.log(reverseStr(str))
+
+

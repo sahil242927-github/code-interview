@@ -21,7 +21,7 @@ for (let char of str) {
 console.log(strObj);
 
 let maxChar = "";
-let max = "";
+let max = 0;
 
 for (let key in strObj) {
   if (strObj[key] > max) {

@@ -7,8 +7,10 @@ Example:
 const s = new Stack()
 s.push(1)
 s.push(2)
+s.peek() // returns 2 "returns the element present at the top of the Stack"
 s.remove() // returns 2
 s.remove() // returns 1
+
 
 */
 
@@ -19,7 +21,7 @@ class Stack {
   push(record) {
     this.data.push(record);
   }
-  remove() {
+  pop() {
     return this.data.pop();
   }
   peek() {
@@ -33,7 +35,7 @@ stack.push(19);
 
 console.log(stack);
 
-stack.remove();
+stack.pop();
 console.log(stack);
 
 console.log(stack.peek());
