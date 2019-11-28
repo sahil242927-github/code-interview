@@ -14,4 +14,4 @@ let obj = {
 
 // This will empty the array
 delete obj["breakfast"].splice(0);
-console.log(fruits); // [ 'apple', 'orange' ]
+console.log(fruits); // []
