@@ -4,6 +4,11 @@
  banarySearch([1,2,3,4,5,6,7,8], 3) // 4
 */
 
+/* We created 3 pointers for binary search
+  start
+  middle
+  end
+*/
 function banarySearch(arr, val) {
   let min = 0;
   let max = arr.length - 1;
