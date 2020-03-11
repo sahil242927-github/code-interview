@@ -7,7 +7,6 @@
 /* We created 3 pointers for binary search
   start
   middle
-  end
 */
 function banarySearch(arr, val) {
   let min = 0;
