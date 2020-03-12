@@ -16,3 +16,4 @@ function bubbleSort(arr) {
   // return the sorted array
   return arr;
 }
+console.log(bubbleSort([14, 9, 4, 3, 27, 20]));
