@@ -25,4 +25,4 @@ function radixSort(nums) {
   }
   return nums;
 }
-console.log(radixSort([9, 8, 7, 3, 6]));
+console.log(radixSort([9, 84, 7454, 3, 6]));
