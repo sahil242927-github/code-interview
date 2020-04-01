@@ -82,7 +82,15 @@ class SinglyLinkedList {
       i++;
       current = current.next;
     }
-    return current.val;
+    return current;
+  }
+  set(index, val) {
+    let foundNode = this.get(index);
+    if (foundNode) {
+      foundNode.val = val;
+      return true;
+    }
+    return false;
   }
 }
 
@@ -91,8 +99,10 @@ let list = new SinglyLinkedList();
 list.push(10);
 list.push(20);
 list.push(30);
-//list.traverse();
+list.traverse();
 //list.unshift(50);
 //console.log("Updated List");
-//list.traverse();
+list.traverse();
+list.set(0, 50);
+list.traverse();
 console.log(list.get(1));
