@@ -92,17 +92,61 @@ class SinglyLinkedList {
     }
     return false;
   }
+  /* !! : converts any type into boolean (true or false)*/
+  insert(index, val) {
+    if (index < 0 || index > this.length) return false;
+    if (index === this.length) return !!this.push(val);
+    if (index === 0) return !!this.unshift(val);
+    var newNode = new Node(val);
+    var prev = this.get(index - 1);
+    var temp = prev.next;
+    prev.next = newNode;
+    newNode.next = temp;
+    this.length++;
+    return true;
+  }
+  remove(index) {
+    if (index < 0 || index >= this.length) return false;
+    if (index === 0) return this.shift(index);
+    if (index === this.length - 1) return this.pop(index);
+    let previousNode = this.get(index - 1);
+    let removed = previousNode.next;
+    previousNode.next = removed.next;
+    this.length--;
+    return removed;
+  }
+  reverse() {
+    let node = this.head;
+    this.head = this.tail;
+    this.tail = node;
+    let prev = null;
+    let next;
+    for (var i = 0; i < this.length; i++) {
+      next = node.next;
+      node.next = prev;
+      prev = node;
+      node = next;
+    }
+    return this;
+  }
+  print() {
+    let arr = [];
+    var current = this.head;
+    while (current) {
+      arr.push(current.val);
+      current = current.next;
+    }
+    console.log(arr);
+  }
 }
 
 let list = new SinglyLinkedList();
 
-list.push(10);
-list.push(20);
-list.push(30);
+list.push(100);
+list.push(201);
+list.push(250);
+list.push(350);
 list.traverse();
-//list.unshift(50);
-//console.log("Updated List");
-list.traverse();
-list.set(0, 50);
-list.traverse();
-console.log(list.get(1));
+list.reverse();
+list.print();
+console.log(list);
