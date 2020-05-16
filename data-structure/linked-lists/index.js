@@ -137,7 +137,7 @@ class LinkedList {
   }
 }
 
-/*const list = new LinkedList();
+const list = new LinkedList();
 // list.inserFirst(15);
 list.inserFirst(5);
 list.inserFirst(225);
@@ -146,6 +146,5 @@ list.inserFirst(25);
 //console.log(list.size());
 //console.log(list.removeFirst());
 list.insertLast(100);
-//console.log(JSON.stringify(list));*/
 
 module.exports = { Node, LinkedList };
