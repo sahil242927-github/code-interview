@@ -26,4 +26,4 @@ function banarySearch(arr, val) {
   return -1;
 }
 
-console.log(banarySearch([1, 2, 3, 4, 5, 6, 7, 8], 8));
+console.log(banarySearch([1, 2, 3, 4, 5, 6, 7, 8], 3));
