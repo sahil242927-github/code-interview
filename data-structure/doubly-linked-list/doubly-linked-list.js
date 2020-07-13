@@ -71,7 +71,7 @@ class DoublyLinkedList {
     if (index < 0 || index >= this.length) return null;
     let count, current;
     if (index <= this.length / 2) {
-      console.log("Searched from head");
+      console.log('Searched from head');
       count = 0;
       current = this.head;
       while (count !== index) {
@@ -79,7 +79,7 @@ class DoublyLinkedList {
         count++;
       }
     } else {
-      console.log("Searched from Tail");
+      console.log('Searched from Tail');
       count = this.length - 1;
       current = this.tail;
       while (count !== index) {
@@ -97,14 +97,51 @@ class DoublyLinkedList {
       current = current.next;
     }
   }
+  set(index, val) {
+    var foundNode = this.get(index);
+    if (foundNode != null) {
+      foundNode.val = val;
+      return true;
+    } else {
+      return false;
+    }
+  }
+  insert(index, val) {
+    if (index < 0 || index > this.length) return false;
+    if (index === 0) return !!this.unshift(val);
+    if (index === this.length) return !!this.push(val);
+
+    const newNode = new Node(val);
+    var beforeNode = this.get(index - 1); // finding the item one before the given index
+    var afterNode = beforeNode.next;
+
+    (beforeNode.next = afterNode), (newNode.prev = beforeNode);
+    (newNode.next = afterNode), (afterNode.prev = newNode);
+
+    this.length++;
+    return true;
+  }
+  remove(index) {
+    if (index < 0 || index >= this.length) return false;
+    if (index === 0) return this.shift(index);
+    if (index === this.length - 1) return this.pop(index);
+    var removedNode = this.get(index);
+    removedNode.prev.next = removedNode.next;
+    removedNode.next.prev = removedNode.prev;
+    removedNode.next = null;
+    removedNode.prev = null;
+    this.length--;
+    return removedNode;
+  }
 }
 
 const list = new DoublyLinkedList();
-list.push(20);
-list.push(100);
-list.push(30);
-list.push(40);
-list.push(50);
-list.push(60);
+list.push('Harry');
+list.push('Ron');
+list.push('Hermine');
+
+// list.set(2, 'Heroin!');
+// list.set(0, 'Harry!');
+
 list.traverse();
-console.log(list.get(2));
+console.log(list.remove(1));
